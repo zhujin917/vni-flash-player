@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VNI.FlashPlayer</title>
+    <link rel="stylesheet" type="text/css" href="../css/play/style.css">
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/play/script.js"></script>
+    <script type="text/javascript" src="../js/play/menu.js" defer></script>
+    <script type="text/javascript" src="../js/play/playing.js" defer></script>
+    <script type="text/javascript" src="../js/play/key.js" defer></script>
+</head>
+
+<body>
+    <div id="menu"></div>
+    <div id="menu_back" hidden></div>
+    <div id="context" hidden></div>
+    <div id="context_back" hidden></div>
+    <div id="control">
+        <div id="control_bar">
+            <div id="control_bar_default"></div>
+            <div id="control_bar_left" hidden></div>
+            <div id="control_bar_point" hidden>
+                <div class="drag"></div>
+            </div>
+        </div>
+        <div id="control_text"></div>
+        <div id="control_con">
+            <div id="control_replay" title="重新播放">
+                <img src="../img/icons/replay-music.svg">
+            </div>
+            <div id="control_backward" title="向后">
+                <img src="../img/icons/go-start.svg" style="transform: scale(1.35);">
+            </div>
+            <div id="control_play" title="播放/暂停">
+                <img src="../img/icons/play-one.svg">
+            </div>
+            <div id="control_forward" title="向前">
+                <img src="../img/icons/go-end.svg" style="transform: scale(1.35);">
+            </div>
+            <div id="control_cancel" title="停止播放">
+                <img src="../img/icons/close.svg">
+            </div>
+        </div>
+        <div id="control_fulscr" title="切换全屏">
+            <img src="../img/icons/full-screen-two.svg">
+        </div>
+    </div>
+    <div id="play">
+        <div id="play_loading" hidden>
+            <svg version="1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><style>@keyframes rotate{0%{transform:rotate(0deg)}to{transform:rotate(360deg)}}@keyframes fillunfill{0%{stroke-dashoffset:32.3}50%{stroke-dashoffset:0}to{stroke-dashoffset:-31.9}}@keyframes rot{0%{transform:rotate(0deg)}to{transform:rotate(-360deg)}}@keyframes colors{0%,to{stroke:var(--theme-color)}}</style><g style="animation-duration:1568.63ms;animation-iteration-count:infinite;animation-name:rotate;animation-timing-function:linear;transform-origin:50% 50%;width:16px;height:16px"><path fill="none" d="M8 1.125A6.875 6.875 0 1 1 1.125 8" stroke-width="1" stroke-linecap="round" style="animation-duration:1333ms,5332ms,5332ms;animation-fill-mode:forwards;animation-iteration-count:infinite,infinite,infinite;animation-name:fillunfill,rot,colors;animation-play-state:running,running,running;animation-timing-function:cubic-bezier(.4,0,.2,1),steps(4),linear;transform-origin:50% 50%" stroke-dasharray="32.4" stroke-dashoffset="32.4"></path></g></svg>
+            <p id="play_loading_text"></p>
+        </div>
+        <img id="play_logo" src="../img/logo.png">
+    </div>
+    <object hidden>
+        <embed id="play_obj" src="" quality="high" allowScriptAccess="always" type="application/x-shockwave-flash">
+    </object>
+    <input type="file" id="openFile" accept=".swf" onchange="openFile(this);" hidden>
+</body>
+
+</html>

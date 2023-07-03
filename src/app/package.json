@@ -1,0 +1,7 @@
+{
+    "name": "VNI_FlashPlayer",
+    "version": "2.0.0",
+    "main": "main.js",
+    "author": "VNI.Software",
+    "description": "Play Flash files."
+}

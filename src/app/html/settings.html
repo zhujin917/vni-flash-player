@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <link rel="stylesheet" type="text/css" href="../css/settings/style.css">
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/settings/script.js" defer></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="bar">
+            <span style="font-size: 20px; font-weight: bolder;">外观</span>
+            <div class="line"></div>
+        </div>
+        <div class="bar">
+            <span>启动</span>
+            <div class="line" hidden></div>
+        </div>
+        <div class="bar">
+            <span>播放</span>
+            <div class="line" hidden></div>
+        </div>
+        <div class="bar">
+            <span>全屏</span>
+            <div class="line" hidden></div>
+        </div>
+        <div class="bar">
+            <span>高级</span>
+            <div class="line" hidden></div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="panel">
+            <div>
+                <p>深色模式</p>
+                <select id="set_aper_darkmode">
+                    <option value="NO">关闭</option>
+                    <option value="YES">开启</option>
+                </select>
+            </div>
+            <div>
+                <p>主题色</p>
+                <select id="set_aper_color">
+                    <option value="#C01011">默认</option>
+                    <option value="#0078D4">微软</option>
+                    <option value="#70C000">青柠</option>
+                    <option value="#4CB6C2">靛青</option>
+                    <option value="#BB8CDD">魅紫</option>
+                    <option value="#FF4B68">玫红</option>
+                    <option value="#5CA1FF">岛蓝</option>
+                    <option value="#1E9FFF">经典</option>
+                </select>
+            </div>
+        </div><div class="panel">
+            <div>
+                <p>无任务时<span>正常启动时</span></p>
+                <select id="set_startup_normal">
+                    <option value="NORMAL">正常</option>
+                    <option value="MAXIMIZE">最大化</option>
+                    <option value="FULLSCREEN">全屏</option>
+                </select>
+            </div>
+            <div>
+                <p>有任务时<span>携带参数启动时</span></p>
+                <select id="set_startup_play">
+                    <option value="NORMAL">正常</option>
+                    <option value="MAXIMIZE">最大化</option>
+                    <option value="FULLSCREEN">全屏</option>
+                </select>
+            </div>
+        </div><div class="panel">
+            <div>
+                <p>向前帧数</p>
+                <input id="set_player_forward">
+            </div>
+            <div>
+                <p>向后帧数</p>
+                <input id="set_player_backward">
+            </div>
+            <div>
+                <p>右键菜单样式<span>原生菜单包含了更多的功能</span></p>
+                <select id="set_player_context">
+                    <option value="YES">美观</option>
+                    <option value="NO">原生</option>
+                </select>
+            </div>
+            <div>
+                <p>播放时拖入文件<span>选“允许”可能会和播放的文件冲突</span></p>
+                <select id="set_player_drop">
+                    <option value="YES">允许</option>
+                    <option value="NO">禁止</option>
+                </select>
+            </div>
+        </div><div class="panel">
+            <!-- <div>
+                <p>立即切换<span>开启或关闭全屏模式</span></p>
+                <button id="set_fulscr_now">切换</button>
+            </div> -->
+            <div>
+                <p>顶部菜单栏</p>
+                <select id="set_fulscr_top">
+                    <option value="NO">保留</option>
+                    <option value="YES">隐藏</option>
+                </select>
+            </div>
+            <div>
+                <p>底部播放器控制栏</p>
+                <select id="set_fulscr_bottom">
+                    <option value="NO">保留</option>
+                    <option value="YES">隐藏</option>
+                </select>
+            </div>
+        </div><div class="panel">
+            <div>
+                <p>退出 VNI.FlashPlayer</p>
+                <button id="set_adv_quit">退出</button>
+            </div>
+            <div>
+                <p>重置设置<span>恢复所有设置至默认状态并重启应用程序</span></p>
+                <button id="set_adv_def">重置</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
